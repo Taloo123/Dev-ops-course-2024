@@ -1,10 +1,13 @@
-Setting Up and Implementing a CI/CD Pipeline for Terraform and EKS
+# Setting Up and Implementing a CI/CD Pipeline for Terraform and EKS
+
 As part of my hands-on experience in DevOps, I implemented a CI/CD pipeline to automate the provisioning of an Amazon EKS cluster using Terraform and GitHub Actions. Below is a detailed and structured description, including the commands and YAML code used.
 
-Step 1: Preparing the GitHub Repository
+# Step 1: Preparing the GitHub Repository
+
 I ensured that my GitHub repository contained the necessary Terraform code for provisioning an EKS cluster. This included configurations for networking, cluster creation, and other dependent AWS resources.
 
-Step 2: Setting Up the Workflows Directory
+# Step 2: Setting Up the Workflows Directory
+
 To define GitHub Actions workflows, I created the following directory structure in the repository:
 
 bash
@@ -69,7 +72,7 @@ jobs:
       - name: Deploy application to EKS
         run: |
           kubectl apply -f kubernetes-deployment.yaml  # Replace with the path to your manifest files
-Step 4: Configuring Secrets
+# Step 4: Configuring Secrets
 I securely added the required secrets in the GitHub repository under Settings > Secrets and Variables > Actions:
 
 AWS_ACCESS_KEY_ID: The AWS IAM access key.
